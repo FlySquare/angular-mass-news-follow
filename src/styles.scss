@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+body{
+  font-family: 'Rubik', sans-serif;
+  background-color: #4b4a4a;
+}
+
+.content{
+  width: 95%;
+  margin-top: 20px !important;
+  background-color: white;
+  border-radius: 15px;
+  margin: auto;
+}

@@ -1,0 +1,36 @@
+.content {
+  .main {
+    .row {
+      .channel {
+        height: 250px;
+        background-color: white;
+        border-radius: 15px;
+        padding: 10px;
+        border: 2px solid #4b4a4a;
+      }
+    }
+    width: 100%;
+    height: 100%;
+  }
+  .settingsButton{
+    i{
+      color: white;
+    }
+    width: 50px;
+    height: 50px;
+    background: #1d1dab;
+    border-radius: 100%;
+    box-shadow:0 10px 15px 0 rgba(0, 0, 0, 20);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    bottom: 20px;
+    right: 20px;
+    align-content: center;
+    justify-content: center;
+    position: fixed;
+    align-items: center;
+  }
+  background-color: rgba(255, 255, 255, 0);
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "name": "TRT Haber",
+      "slug": "Lrxv1_i3qc",
+      "embedUrl": "https://www.youtube.com/embed/",
+      "provider": "youtube"
+    },
+    {
+      "name": "Haber Global",
+      "slug": "UVPejgEw21c",
+      "embedUrl": "https://www.youtube.com/embed/",
+      "provider": "youtube"
+    },
+    {
+      "name": "TGRT Haber",
+      "slug": "gzmG_1SVy8Y",
+      "embedUrl": "https://www.youtube.com/embed/",
+      "provider": "youtube"
+    },
+    {
+      "name": "CNN Türk",
+      "slug": "X_EWYemclKA",
+      "embedUrl": "https://www.youtube.com/embed/",
+      "provider": "youtube"
+    },
+    {
+      "name": "Ülke TV",
+      "slug": "zA_wXMU11xo",
+      "embedUrl": "https://www.youtube.com/embed/",
+      "provider": "youtube"
+    },
+    {
+      "name": "24 TV",
+      "slug": "V5mBTSql74Q",
+      "embedUrl": "https://www.youtube.com/embed/",
+      "provider": "youtube"
+    },
+    {
+      "name": "Sözcü TV",
+      "slug": "1amrc2Mxjhs",
+      "embedUrl": "https://www.youtube.com/embed/",
+      "provider": "youtube"
+    },
+    {
+      "name": "TV100",
+      "slug": "sd94keSra6A",
+      "embedUrl": "https://www.youtube.com/embed/",
+      "provider": "youtube"
+    },
+    {
+      "name": "NTV",
+      "slug": "XEJM4Hcgd3M",
+      "embedUrl": "https://www.youtube.com/embed/",
+      "provider": "youtube"
+    },
+    {
+      "name": "TELE1",
+      "slug": "eenp_e9_c1Q",
+      "embedUrl": "https://www.youtube.com/embed/",
+      "provider": "youtube"
+    },
+    {
+      "name": "A Haber",
+      "slug": "g4QA9Sh_g_8",
+      "embedUrl": "https://www.youtube.com/embed/",
+      "provider": "youtube"
+    },
+    {
+      "name": "Bloomberg HT",
+      "slug": "hHSmBJk6w0c",
+      "embedUrl": "https://www.youtube.com/embed/",
+      "provider": "youtube"
+    }
+  ]
+}

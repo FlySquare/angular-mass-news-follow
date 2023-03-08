@@ -1,0 +1,35 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Uygulama Ayarları</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+
+    <div class="mb-3">
+      <label for="bgColor">Arka Plan Rengi</label>
+      <div class="input-group">
+        <input type="color" [(ngModel)]="settings.bgColor" class="form-control form-control-color" id="bgColor" value="#4b4a4a">
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="cartColor">Kart Rengi</label>
+      <div class="input-group">
+        <input type="color" [(ngModel)]="settings.cartColor" class="form-control form-control-color" id="cartColor" value="#FFFFFF">
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="channelCount">Görüntülenecek Kanal Sayısı</label>
+      <div class="input-group">
+        <input type="number" [(ngModel)]="settings.channelCount" class="form-control" id="channelCount" value="12">
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="channelCount">Kanal Listesi</label>
+      <div class="input-group">
+
+      </div>
+    </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="saveSettings()">Kaydet</button>
+  <button type="button" class="btn btn-outline-dark" (click)="resetSettings()">Sıfırla</button>
+</div>
