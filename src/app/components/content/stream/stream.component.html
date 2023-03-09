@@ -1,0 +1,2 @@
+<p>{{ channel?.name }}</p>
+<iframe class="channelIframe" [id]="'iframe'+channel.id" [src]="channel?.fullUrl + (settings?.autoPlay ? '?autoplay=1' : '') | safe:'resourceUrl'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0"></iframe>

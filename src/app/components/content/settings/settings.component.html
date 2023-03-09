@@ -4,30 +4,59 @@
 </div>
 <div class="modal-body">
 
-    <div class="mb-3">
-      <label for="bgColor">Arka Plan Rengi</label>
-      <div class="input-group">
-        <input type="color" [(ngModel)]="settings.bgColor" class="form-control form-control-color" id="bgColor" value="#4b4a4a">
-      </div>
+  <div class="mb-3">
+    <label for="bgColor">Arka Plan Rengi</label>
+    <div class="input-group">
+      <input type="color" [(ngModel)]="settings.bgColor" class="form-control form-control-color" id="bgColor"
+             value="#4b4a4a">
     </div>
-    <div class="mb-3">
-      <label for="cartColor">Kart Rengi</label>
-      <div class="input-group">
-        <input type="color" [(ngModel)]="settings.cartColor" class="form-control form-control-color" id="cartColor" value="#FFFFFF">
-      </div>
+  </div>
+  <div class="mb-3">
+    <label for="cartColor">Kart Rengi</label>
+    <div class="input-group">
+      <input type="color" [(ngModel)]="settings.cartColor" class="form-control form-control-color" id="cartColor"
+             value="#FFFFFF">
     </div>
-    <div class="mb-3">
+  </div>
+  <div class="row">
+    <div class="mb-3 col-12 col-sm-6">
       <label for="channelCount">Görüntülenecek Kanal Sayısı</label>
       <div class="input-group">
         <input type="number" [(ngModel)]="settings.channelCount" class="form-control" id="channelCount" value="12">
       </div>
     </div>
-    <div class="mb-3">
-      <label for="channelCount">Kanal Listesi</label>
-      <div class="input-group">
-
+    <div class="mb-3 col-12 col-sm-6">
+      <label for="autoPlay">Otomatik Oynatma</label>
+      <select [(ngModel)]="settings.autoPlay" class="form-select" id="autoPlay">
+        <option value="1">Açık</option>
+        <option value="0">Kapalı</option>
+      </select>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="channelCount">Kanal Listesi</label>
+    <hr>
+    <div class="input-group row">
+      <div *ngFor="let channel of settings.channels" class="channel col-12">
+        <p>{{channel.name}}</p>
+        <div class="row">
+          <div class="col-8">
+            <input type="text" [(ngModel)]="channel.fullUrl" class="form-control">
+          </div>
+          <div class="col-4">
+            <div class="row">
+              <button class="col-5 btn btn-warning">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </button>
+              <button (click)="deleteChannel(channel)" class="col-5 btn btn-danger">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-outline-dark" (click)="saveSettings()">Kaydet</button>

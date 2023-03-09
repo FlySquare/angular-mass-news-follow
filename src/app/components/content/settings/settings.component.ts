@@ -11,22 +11,32 @@ import {Settings} from "../../../models/settings";
 })
 export class SettingsComponent implements OnInit {
   @Input() modal: any;
-  settings: Settings = this.globalService.getSettings();
+  settings: Settings;
+
   constructor(
     private globalService: GlobalService,
-  ) { }
-
-  ngOnInit() {
-    console.log(this.settings);
+  ) {
   }
 
-  saveSettings(){
-    this.globalService.setSettings(this.settings);
+  ngOnInit() {
+    this.globalService.settings$.subscribe((settings: Settings) => {
+      this.settings = settings;
+    });
+  }
+
+  saveSettings() {
+    this.globalService.updateSettings$(this.settings);
     alert('Settings saved');
     this.modal.close();
   }
 
-  resetSettings(){
+  deleteChannel(channel: Channel) {
+    this.settings.channels = this.settings.channels.filter((c: Channel) => c.id !== channel.id);
+    this.globalService.updateSettings$(this.settings);
+    alert('Channel deleted');
+  }
+
+  resetSettings() {
     this.globalService.getChannels().subscribe((channels: Channel[]) => {
       this.globalService.resetSettings(channels);
     });

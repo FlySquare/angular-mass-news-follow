@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="row">
-      <app-stream *ngFor="let channel of channels" [channel]="channel" class="channel col-12 col-sm-6 col-md-3"></app-stream>
+      <app-stream *ngFor="let channel of channels;" [channel]="channel" class="channel col-12 col-sm-6 col-md-3"></app-stream>
     </div>
   </div>
   <div (click)="openSettings(content)" class="settingsButton">

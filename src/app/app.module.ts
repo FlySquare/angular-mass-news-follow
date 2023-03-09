@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './componenets/layouts/header/header.component';
-import { FooterComponent } from './componenets/layouts/footer/footer.component';
-import { StreamComponent } from './componenets/content/stream/stream.component';
+import { HeaderComponent } from './components/layouts/header/header.component';
+import { FooterComponent } from './components/layouts/footer/footer.component';
+import { StreamComponent } from './components/content/stream/stream.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainComponent } from './pages/main/main.component';
 import { SafePipe } from './pipes/safe.pipe';

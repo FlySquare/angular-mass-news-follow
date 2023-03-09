@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Channel} from "../../models/channel";
 import {GlobalService} from "../../services/global.service";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {Settings} from "../../models/settings";
 
 @Component({
   selector: 'app-main',
@@ -16,11 +17,8 @@ export class MainComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.globalService.getChannels().subscribe((channels: Channel[]) => {
-      if (typeof this.globalService.getSettings() === 'undefined') {
-        this.globalService.resetSettings(channels);
-      }
-      //this.channels = channels;
+    this.globalService.settings$.subscribe((settings: Settings) => {
+      this.channels = settings.channels.slice(0, settings.channelCount);
     });
   }
 
