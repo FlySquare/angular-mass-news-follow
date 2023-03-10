@@ -1,27 +1,44 @@
-# AngularMassNewsFollow
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+# Project Details - Angular Mass News Follow
 
-## Development server
+It is a project created to follow and organize Turkish news-based content from a single interface.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Test Link: https://iamumut.com/toplu-haber-takip/
 
-## Code scaffolding
+## Requirements
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Angular (v15.0.3 or newer)
 
-## Build
+## Setup
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* Clone or download this repository.
+* Open the console and go to the home directory of the project.
+* Run the `npm install` command.
 
-## Running unit tests
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Open the console and go to the home directory of the project.
+* Run the `ng serve` command.
+* Send a GET request to localhost:4200.
+## API Reference
 
-## Running end-to-end tests
+#### Get All Channels
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```http
+  GET /assets/channels.json
+```
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Developer
+
+- [@flysquare](https://www.github.com/flysquare)
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Support
+
+For support, you can contact over umutkonrinso@gmail.com or https://iamumut.com.
+You can open an issue request on this project.
+

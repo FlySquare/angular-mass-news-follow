@@ -2,74 +2,82 @@
   "data": [
     {
       "name": "TRT Haber",
-      "slug": "Lrxv1_i3qc",
-      "embedUrl": "https://www.youtube.com/embed/",
+      "fullUrl": "https://www.youtube.com/watch?v=-Lrxv1_i3qc",
       "provider": "youtube"
     },
     {
       "name": "Haber Global",
-      "slug": "UVPejgEw21c",
-      "embedUrl": "https://www.youtube.com/embed/",
+      "fullUrl": "https://www.youtube.com/watch?v=UVPejgEw21c",
       "provider": "youtube"
     },
     {
       "name": "TGRT Haber",
-      "slug": "gzmG_1SVy8Y",
-      "embedUrl": "https://www.youtube.com/embed/",
+      "fullUrl": "https://www.youtube.com/watch?v=gzmG_1SVy8Y",
       "provider": "youtube"
     },
     {
-      "name": "CNN Türk",
-      "slug": "X_EWYemclKA",
-      "embedUrl": "https://www.youtube.com/embed/",
+      "name": "Haber Türk",
+      "fullUrl": "https://www.youtube.com/watch?v=SqHIO2zhxbA",
       "provider": "youtube"
     },
     {
       "name": "Ülke TV",
-      "slug": "zA_wXMU11xo",
-      "embedUrl": "https://www.youtube.com/embed/",
+      "fullUrl": "https://www.youtube.com/watch?v=zA_wXMU11xo",
       "provider": "youtube"
     },
     {
       "name": "24 TV",
-      "slug": "V5mBTSql74Q",
-      "embedUrl": "https://www.youtube.com/embed/",
+      "fullUrl": "https://www.youtube.com/watch?v=V5mBTSql74Q",
       "provider": "youtube"
     },
     {
       "name": "Sözcü TV",
-      "slug": "1amrc2Mxjhs",
-      "embedUrl": "https://www.youtube.com/embed/",
+      "fullUrl": "https://www.youtube.com/watch?v=1amrc2Mxjhs",
       "provider": "youtube"
     },
     {
       "name": "TV100",
-      "slug": "sd94keSra6A",
-      "embedUrl": "https://www.youtube.com/embed/",
+      "fullUrl": "https://www.youtube.com/watch?v=sd94keSra6A",
       "provider": "youtube"
     },
     {
       "name": "NTV",
-      "slug": "XEJM4Hcgd3M",
-      "embedUrl": "https://www.youtube.com/embed/",
+      "fullUrl": "https://www.youtube.com/watch?v=XEJM4Hcgd3M",
       "provider": "youtube"
     },
     {
       "name": "TELE1",
-      "slug": "eenp_e9_c1Q",
-      "embedUrl": "https://www.youtube.com/embed/",
+      "fullUrl": "https://www.youtube.com/watch?v=eenp_e9_c1Q",
       "provider": "youtube"
     },
     {
       "name": "A Haber",
-      "slug": "g4QA9Sh_g_8",
-      "embedUrl": "https://www.youtube.com/embed/",
+      "fullUrl": "https://www.youtube.com/watch?v=g4QA9Sh_g_8",
       "provider": "youtube"
     },
     {
       "name": "Bloomberg HT",
-      "slug": "hHSmBJk6w0c",
-      "embedUrl": "https://www.youtube.com/embed/",
+      "fullUrl": "https://www.youtube.com/watch?v=hHSmBJk6w0c",
+      "provider": "youtube"
+    },
+    {
+      "name": "Halk TV",
+      "fullUrl": "https://www.youtube.com/watch?v=r2ZgRoX2orE",
+      "provider": "youtube"
+    },
+    {
+      "name": "Medya Haber TV",
+      "fullUrl": "https://www.youtube.com/watch?v=F3Ip2djDjng",
+      "provider": "youtube"
+    },
+    {
+      "name": "Ulusal Kanal",
+      "fullUrl": "https://www.youtube.com/watch?v=NgxgKZiayRk",
+      "provider": "youtube"
+    },
+    {
+      "name": "TV5",
+      "fullUrl": "https://www.youtube.com/watch?v=56MllGbeFME",
       "provider": "youtube"
     }
   ]

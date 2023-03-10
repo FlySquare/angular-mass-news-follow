@@ -34,6 +34,7 @@ export class GlobalService {
     document.body.style.backgroundColor = settings.bgColor;
     Array.from(document.getElementsByTagName('app-stream')).forEach((cart: any) => {
       cart.style.backgroundColor = settings.cartColor;
+      cart.style.borderColor = settings.bgColor;
     });
   }
 
@@ -45,7 +46,7 @@ export class GlobalService {
     const settings = {
       bgColor: '#4b4a4a',
       cartColor: '#FFFFFF',
-      channelCount: 12,
+      channelCount: 16,
       autoPlay: 0,
       channels: channels,
     }

@@ -3,7 +3,9 @@
   <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
 </div>
 <div class="modal-body">
-
+  <div *ngIf="alertSettings.type !== ''" class="alert alert-{{alertSettings.type }}" role="alert">
+    {{ alertSettings.message }}
+  </div>
   <div class="mb-3">
     <label for="bgColor">Arka Plan Rengi</label>
     <div class="input-group">
@@ -34,21 +36,26 @@
     </div>
   </div>
   <div class="mb-3">
-    <label for="channelCount">Kanal Listesi</label>
+    <div class="channelShow">
+      <p>Kanal Listesi</p>
+      <div class="form-check form-switch">
+        <input class="form-check-input" [(ngModel)]="showChannels" type="checkbox" role="switch"
+               id="flexSwitchCheckDefault">
+      </div>
+    </div>
     <hr>
-    <div class="input-group row">
+    <div *ngIf="showChannels" class="input-group row cluster">
       <div *ngFor="let channel of settings.channels" class="channel col-12">
-        <p>{{channel.name}}</p>
         <div class="row">
-          <div class="col-8">
-            <input type="text" [(ngModel)]="channel.fullUrl" class="form-control">
+          <div *ngIf="!channel.isCustom" class="col-7">
+            <p>{{channel.name}}</p>
           </div>
-          <div class="col-4">
+          <div *ngIf="channel.isCustom" class="col-7">
+            <p>{{ channel.fullUrl }}</p>
+          </div>
+          <div class="col-5">
             <div class="row">
-              <button class="col-5 btn btn-warning">
-                <i class="fa fa-pencil" aria-hidden="true"></i>
-              </button>
-              <button (click)="deleteChannel(channel)" class="col-5 btn btn-danger">
+              <button (click)="deleteChannel(channel)" class="col-5 addRemoveButton btn btn-danger">
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
               </button>
             </div>
@@ -56,9 +63,89 @@
         </div>
       </div>
     </div>
+
+    <div class="buttonGroups row">
+      <div class="col-12 col-sm-6">
+        <button type="button" class="btn btn-outline-success" (click)="open(dbChannelsModal)">Varolan Kanal Ekle
+        </button>
+      </div>
+      <div class="col-12 col-sm-6">
+        <button type="button" class="btn btn-outline-primary" (click)="open(addCustomChannel)">Özel Kanal Ekle</button>
+      </div>
+    </div>
   </div>
 </div>
 <div class="modal-footer">
-  <button type="button" class="btn btn-outline-dark" (click)="saveSettings()">Kaydet</button>
-  <button type="button" class="btn btn-outline-dark" (click)="resetSettings()">Sıfırla</button>
+  <button type="button" class="btn btn-outline-dark" (click)="saveSettings(false)">Ayarları Kaydet</button>
+  <button type="button" class="btn btn-outline-danger" (click)="resetSettings()">Sıfırla</button>
 </div>
+
+<ng-template #dbChannelsModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title2">Varolan Kanallar</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+  </div>
+  <div class="modal-body">
+    <div *ngIf="alertSettings.type !== ''" class="alert alert-{{alertSettings.type }}" role="alert">
+      {{ alertSettings.message }}
+    </div>
+    <form>
+      <div class="mb-3">
+        <p>Kanal Listesi</p>
+        <hr>
+        <div class="input-group row cluster">
+          <div *ngFor="let channel of dbChannels" class="channel col-12">
+            <div class="row">
+              <div *ngIf="!channel.isCustom" class="col-7">
+                <p>{{channel.name}}</p>
+              </div>
+              <div class="col-5">
+                <div class="row">
+                  <button (click)="addChannel(channel)" class="col-5 addRemoveButton btn btn-success">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="dbChannels.length === 0" class="col-12">
+            <p>Tüm kanallar zaten gösterimde.</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Kaydet & Kapat</button>
+  </div>
+</ng-template>
+
+<ng-template #addCustomChannel let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title3">Özel Kanal Ekle</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+  </div>
+  <div class="modal-body">
+    <div *ngIf="alertSettings.type !== ''" class="alert alert-{{alertSettings.type }}" role="alert">
+      {{ alertSettings.message }}
+    </div>
+    <div class="mb-3">
+      <p>Özel Kanal Bilgileri</p>
+      <hr>
+      <div class="input-group row cluster">
+        <input type="text" [(ngModel)]="customChannelUrl" placeholder="Twitch veya Youtube Linki" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="addChannel()">Kaydet & Kapat</button>
+  </div>
+</ng-template>
+
+
+
+
+
+
+
+
